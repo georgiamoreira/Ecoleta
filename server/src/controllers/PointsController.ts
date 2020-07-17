@@ -27,7 +27,7 @@ class PointsController {
   }
 
   async show(request: Request, response: Response) {
-    const { id }= request.params;
+    const { id } = request.params;
 
     const point = await knex('points').where('id', id).first();
 
@@ -46,6 +46,38 @@ class PointsController {
     .select('items.title');
 
     return response.json({ point: serializedPoint, items });
+  }
+
+  async delete(request: Request, response: Response) {
+    const { id } = request.params;
+
+    await knex('points').where('id', id).del();  
+
+    return response.json('Voce deletou um ponto');
+  }
+
+  async put(request: Request, response: Response) {
+    const {
+      id,
+      name,
+      whatsapp,
+      } = request.body;
+
+    await knex('points').where('id', id).update({
+      name, whatsapp
+    });
+    
+    const updated = await knex('points').where('id', id).first();
+
+    const filtered = { 
+      id: updated.id,
+      image: updated.image,
+      name: updated.name,
+      email: updated.email,
+      whatsapp: updated.whatsapp,
+    }
+
+    return response.json({filtered});
   }
 
   async create(request: Request, response: Response) {
