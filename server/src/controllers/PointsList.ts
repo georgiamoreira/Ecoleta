@@ -7,7 +7,7 @@ class PointsList {
 
   const serializedPoints = points.map(point => {
     return {
-      ...point,
+      ...point,            
     };
   });
 
