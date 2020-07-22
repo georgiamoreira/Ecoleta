@@ -60,18 +60,18 @@ class PointsController {
  
     const items = await knex('items')
     .join('point_items', 'items.id', '=', 'point_items.item_id')
-    .select('items.title');
+    .select('*');
 
-    const serializedPoints = points.map((point, index) => {
+    const serializedPointsItems = points.map((point, index) => {
+      console.log(point);
+      
       return {
         ...point, 
-        item: items.filter(() => {
-          
-        })
+        items: items.filter((item) => point.id === item.point_id)
       }
     })
 
-    return response.json( serializedPoints );
+    return response.json( serializedPointsItems );
   }
 
 
