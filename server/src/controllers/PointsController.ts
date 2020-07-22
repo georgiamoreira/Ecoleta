@@ -48,6 +48,33 @@ class PointsController {
     return response.json({ point: serializedPoint, items });
   }
 
+
+  async list(request: Request, response: Response) {
+
+    const points = await knex('points').select('*')
+
+    if (!points){
+      return response.status(400).json({ message: 'There is no points.'});
+    }
+
+ 
+    const items = await knex('items')
+    .join('point_items', 'items.id', '=', 'point_items.item_id')
+    .select('items.title');
+
+    const serializedPoints = points.map((point, index) => {
+      return {
+        ...point, 
+        item: items.filter(() => {
+          
+        })
+      }
+    })
+
+    return response.json( serializedPoints );
+  }
+
+
   async delete(request: Request, response: Response) {
     const { id } = request.params;
 
