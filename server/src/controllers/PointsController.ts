@@ -63,13 +63,25 @@ class PointsController {
     .select('*');
 
     const serializedPointsItems = points.map((point, index) => {
-      console.log(point);
       
       return {
         ...point, 
-        items: items.filter((item) => point.id === item.point_id)
+        items: items.filter((item) => { return point.id === item.point_id})
+        .map(item => {
+          return {
+            ...item,
+            image_url: `http://192.168.0.14:3002/uploads/${item.image}`,    
+          }
+          
+
+        })
       }
     })
+
+    // {
+    //   "id": 1,
+    //   "title": "Lâmpadas",
+    // },
 
     return response.json( serializedPointsItems );
   }
