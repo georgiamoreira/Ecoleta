@@ -1,0 +1,14 @@
+[user]
+	email = georgiamoreira13@gmail.com
+	name = georgiamoreira
+
+[alias]
+	ci = commit
+	co = checkout
+	cm = checkout master
+	cb = checkout -b
+	st = status -sb
+	sf = show --name-only
+	
+[credential]
+	helper = store
