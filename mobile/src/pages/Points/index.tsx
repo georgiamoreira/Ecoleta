@@ -4,7 +4,7 @@ import { Feather as Icon } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-import { SvgUri } from 'react-native-svg';
+import {SvgUri}  from 'react-native-svg';
 import * as Location from 'expo-location'
 import api from '../../services/api';
 
@@ -12,7 +12,7 @@ import api from '../../services/api';
 interface Item {
   id: number;
   title: string;
-  image_url: string;
+  image_url: string;  
 }
 
 interface Point {
@@ -269,6 +269,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 13,
   },
+
 });
 
 export default Points;

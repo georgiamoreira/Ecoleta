@@ -12,3 +12,5 @@ About the project:
 Ecoleta is a marketplace that helps people to find recyclable trash collection points efficiently.
 
 
+![jhsdg](1.jpeg)
+
