@@ -30,9 +30,10 @@
   <a href="#memo-license">License</a>
 </p>
 
-<p align="center">
-  <img alt="App Demo" src="https://res.cloudinary.com/lukemorales/image/upload/v1563901304/readme_logos/designcode_screen_01_nxrabs.gif">
-  <img alt="App Demo" src="https://res.cloudinary.com/lukemorales/image/upload/v1563901538/readme_logos/designcode_screen_02_kuvvwt.gif">
+<p align="center" style="display: flex">
+  <img alt="App Demo" src="1.jpeg">
+  <img alt="App Demo" src="2.jpeg">
+  <img alt="App Demo" src="3.jpeg">
 </p>
 
 ## :rocket: About the project
@@ -58,6 +59,4 @@ This project was developed with the following technologies:
 
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer. 
 
-
-![jhsdg](1.jpeg)
 
