@@ -15,6 +15,10 @@
   <img alt="App Demo" src="3.jpeg">
 </div>
 
+## :rocket: Watch the project working
+
+<a href="https://www.youtube.com/watch?v=aHdNsnyjh0c&ab_channel=HindiTechTutorials">Click here to see the youtube video!</a>
+
 ## :rocket: About the project
 
 Ecoleta is a marketplace that helps people to find recyclable trash collection points efficiently.
